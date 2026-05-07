@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
@@ -9,7 +8,19 @@
 </url>
 
 <url>
-<loc>https://learntowork.online/ai-labeling-master-guide-1.html</loc>
+<loc>https://learntowork.online/ai-data-labeling.html</loc>
+<lastmod>2026-05-07</lastmod>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://learntowork.online/ai-prompt-engineering-pakistan.html</loc>
+<lastmod>2026-05-07</lastmod>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://learntowork.online/ai-chatbot-monetization-guide.html</loc>
 <lastmod>2026-05-07</lastmod>
 <priority>0.80</priority>
 </url>
@@ -39,12 +50,6 @@
 </url>
 
 <url>
-<loc>https://learntowork.online/about.html</loc>
-<lastmod>2026-05-07</lastmod>
-<priority>0.50</priority>
-</url>
-
-<url>
 <loc>https://learntowork.online/privacy-policy.html</loc>
 <lastmod>2026-05-07</lastmod>
 <priority>0.50</priority>
@@ -52,6 +57,12 @@
 
 <url>
 <loc>https://learntowork.online/disclaimer.html</loc>
+<lastmod>2026-05-07</lastmod>
+<priority>0.50</priority>
+</url>
+
+<url>
+<loc>https://learntowork.online/terms.html</loc>
 <lastmod>2026-05-07</lastmod>
 <priority>0.50</priority>
 </url>
