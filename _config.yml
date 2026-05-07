@@ -1,0 +1,9 @@
+theme: jekyll-theme-slate
+plugins:
+  - jekyll-sitemap
+
+# Remove .html from URLs
+permalink: /:title/
+
+# Build settings
+markdown: kramdown
