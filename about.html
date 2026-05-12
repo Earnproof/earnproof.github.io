@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | LearnToWork</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta name="description" content="LearnToWork helps Pakistanis and beginners worldwide learn how to earn online through YouTube, Pinterest, affiliate marketing, and more.">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="About Us | LearnToWork">
+  <meta property="og:description" content="LearnToWork helps Pakistanis and beginners worldwide learn how to earn online.">
+  <meta property="og:url"         content="https://learntowork.online/about.html">
+  <meta property="og:image"       content="https://learntowork.online/Image.png">
+  <meta property="og:site_name"   content="LearnToWork">
+
+  <link rel="canonical" href="https://learntowork.online/about.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #181c27;
+      --border: #262d42;
+      --text: #e8eaf0;
+      --muted: #8b92a8;
+      --green: #22c55e;
+      --accent: #60a5fa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+    }
+
+    .brand { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .brand span { color: var(--green); }
+
+    .back-link { color: var(--muted); font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--text); }
+
+    .content-wrap { 
+      flex: 1;
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 3rem 1.5rem; 
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+      background: #3b82f615; border: 1px solid #3b82f633;
+      padding: 4px 12px; border-radius: 99px; margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .sub-text {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-card h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      border-left: 3px solid var(--green);
+      padding-left: 1rem;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--green);
+      display: block;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; margin: 0 0.5rem; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 480px) {
+      .content-wrap { padding: 2rem 1rem; }
+      .about-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">LearnToWork<span>.</span></a>
+  <a href="index.html" class="back-link">← Home</a>
+</nav>
+
+<div class="content-wrap">
+  <div class="eyebrow">About Us</div>
+  <h1>We Help You Earn Online<span>.</span></h1>
+  <p class="sub-text">LearnToWork is a free resource for Pakistanis and beginners worldwide who want to learn real ways to make money online.</p>
+
+  <div class="about-card">
+    <h2>Our Mission</h2>
+    <p>We believe everyone deserves access to honest, practical information about online earning. Whether you are a student looking for pocket money, a stay-at-home parent seeking flexible income, or someone ready to build a full-time online business — we are here to guide you with step-by-step strategies that actually work.</p>
+  </div>
+
+  <div class="about-card">
+    <h2>What We Cover</h2>
+    <p>Our guides focus on proven methods like YouTube automation, Pinterest marketing, affiliate marketing, freelancing, and digital product creation. We test strategies ourselves, share real data, and never promote scams or "get rich quick" schemes.</p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number">50+</span>
+      <span class="stat-label">Free Guides</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">100K+</span>
+      <span class="stat-label">Monthly Readers</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">Pakistan</span>
+      <span class="stat-label">Based In</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">2024</span>
+      <span class="stat-label">Founded</span>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <h2>Contact Us</h2>
+    <p>Have questions, feedback, or want to report a scam? We would love to hear from you.</p>
+    <p><strong>Email:</strong> <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a><br>
+    <strong>Website:</strong> <a href="https://learntowork.online">learntowork.online</a></p>
+  </div>
+</div>
+
+<footer>
+  <p>
+    <a href="about.html">About</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="contact.html">Contact</a>
+  </p>
+  <p>© 2026 LearnToWork — Pakistan's Trusted Earning Guide</p>
+</footer>
+
+</body>
+</html>
