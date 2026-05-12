@@ -1,9 +1,47 @@
+# Site settings
+title: Learn To Work
+description: Free guides to earn money online. Real skills, real results, no scams.
+url: https://learntowork.online
+baseurl: ""
+
+# Author
+author: Isabella
+
+# Theme
 theme: jekyll-theme-slate
+
+# Plugins
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Remove .html from URLs
 permalink: /:title/
 
 # Build settings
 markdown: kramdown
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+
+# Google Analytics
+google_analytics: G-G023112WHJ
+
+# Social links
+social:
+  twitter: learntowork
+  youtube: learntowork
+  telegram: learntowork
+
+# Defaults for all pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      lang: "en"
