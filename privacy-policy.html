@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G023112WHJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G023112WHJ');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | LearnToWork</title>
+  <title>Privacy Policy | Learn To Work</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <meta name="description" content="Privacy Policy for LearnToWork. Learn how we handle your data and protect your privacy.">
+  <meta name="description" content="Privacy Policy for Learn To Work. Learn how we handle your data and protect your privacy.">
   <meta name="robots" content="noindex, follow">
 
   <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Privacy Policy | LearnToWork">
-  <meta property="og:description" content="Privacy Policy for LearnToWork.">
+  <meta property="og:title"       content="Privacy Policy | Learn To Work">
+  <meta property="og:description" content="Privacy Policy for Learn To Work.">
   <meta property="og:url"         content="https://learntowork.online/privacy-policy.html">
   <meta property="og:image"       content="https://learntowork.online/Image.png">
-  <meta property="og:site_name"   content="LearnToWork">
+  <meta property="og:site_name"   content="Learn To Work">
 
   <link rel="canonical" href="https://learntowork.online/privacy-policy.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     :root {
-      --bg: #0a0e27;
-      --surface: #1a1f3a;
-      --border: #374151;
-      --text: #f5f7fa;
-      --muted: #9ca3af;
+      --bg: #020617;
+      --surface: rgba(15, 23, 42, 0.7);
+      --border: rgba(148, 163, 184, 0.1);
+      --text: #f8fafc;
+      --muted: #94a3b8;
       --green: #10b981;
       --accent: #3b82f6;
+      --gold: #d4af37;
+      --primary-light: #1e293b;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: linear-gradient(135deg, var(--bg) 0%, #0f1535 100%);
+      background: var(--bg);
       color: var(--text);
       font-family: 'IBM Plex Sans', sans-serif;
       line-height: 1.8;
@@ -42,47 +55,74 @@
       min-height: 100vh;
     }
 
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
     nav {
       border-bottom: 1px solid var(--border);
-      padding: 0 1.5rem;
+      padding: 1.2rem 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 60px;
+      height: 70px;
       position: sticky;
       top: 0;
-      background: rgba(10, 14, 39, 0.95);
+      background: transparent;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(2, 6, 23, 0.95);
       backdrop-filter: blur(10px);
-      z-index: 100;
     }
 
-    .brand { 
-      font-family: 'Lora', serif; 
-      font-size: 1.3rem; 
-      font-weight: 700; 
-      background: linear-gradient(135deg, var(--text), var(--green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none; 
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
-    .back-link { 
-      color: var(--muted); 
-      font-size: 0.9rem; 
-      text-decoration: none; 
-      display: flex; 
-      align-items: center; 
+    .brand i {
+      color: var(--gold);
+      font-size: 1.3rem;
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
       gap: 0.4rem;
-      transition: color 0.3s;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
-    .back-link:hover { color: var(--green); }
 
-    .content-wrap { 
+    .back-link:hover {
+      color: var(--text);
+      transform: translateX(-3px);
+    }
+
+    .content-wrap {
       flex: 1;
-      max-width: 850px; 
-      margin: 0 auto; 
-      padding: 3rem 2rem; 
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 3rem 5%;
     }
 
     h1 {
@@ -103,10 +143,10 @@
     h2 {
       font-family: 'Lora', serif;
       font-size: 1.2rem;
-      color: var(--green);
+      color: var(--accent);
       margin-top: 2.5rem;
       margin-bottom: 1rem;
-      border-left: 3px solid var(--accent);
+      border-left: 3px solid var(--green);
       padding-left: 1rem;
     }
 
@@ -115,13 +155,13 @@
     }
 
     p {
-      color: #d1d5db;
+      color: var(--muted);
       margin-bottom: 1.2rem;
       font-size: 0.95rem;
     }
 
     strong {
-      color: var(--green);
+      color: var(--text);
       font-weight: 600;
     }
 
@@ -132,45 +172,73 @@
 
     li {
       margin-bottom: 0.6rem;
-      color: #d1d5db;
+      color: var(--muted);
     }
 
-    a { 
-      color: var(--green); 
+    a {
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
+      transition: all 0.3s ease;
     }
-    a:hover { text-decoration: underline; }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .bottom-line {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
     footer {
       border-top: 1px solid var(--border);
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 5% 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
       color: var(--muted);
       font-size: 0.85rem;
     }
-    footer a { 
-      color: var(--green); 
-      text-decoration: none; 
-      margin: 0 0.5rem; 
-      font-weight: 500;
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
     }
-    footer a:hover { 
-      color: var(--text); 
-      text-decoration: underline;
+
+    footer a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 768px) {
+      nav { padding: 1.2rem 5%; }
       h1 { font-size: 1.6rem; }
-      .content-wrap { padding: 2rem 1.5rem; }
+      .content-wrap { padding: 2rem 5%; }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
 
-<nav>
-  <a href="/" class="brand">LearnToWork</a>
-  <a href="/" class="back-link">← Home</a>
+<nav id="navbar">
+  <a href="/" class="brand">
+    <i class="fas fa-rocket"></i>
+    Learn To Work
+  </a>
+  <a href="/" class="back-link">
+    <i class="fas fa-arrow-left"></i>
+    Home
+  </a>
 </nav>
 
 <div class="content-wrap">
@@ -180,13 +248,13 @@
   <p><strong>Short version:</strong> I don't collect personal data unnecessarily, I use Google Analytics to see how many people visit, and I'm transparent about it. That's basically it.</p>
 
   <h2>1. What Data Do We Collect?</h2>
-  <p>LearnToWork is pretty simple. When you visit the site, here's what happens:</p>
+  <p>Learn To Work is pretty simple. When you visit the site, here's what happens:</p>
 
   <p><strong>Google Analytics:</strong> I use Google Analytics to understand how many people visit, which pages are popular, and where they come from (which country, device type, etc.). This helps me know what content to write more of. Google collects this automatically via a tracking code on the site. You can read <a href="https://policies.google.com/privacy" target="_blank">Google's privacy policy</a> to see exactly what they do.</p>
 
   <p><strong>Email Contact:</strong> If you email me at hello.littleboom@gmail.com with questions or feedback, I'll see your email address and message. I only use this to respond to you. I don't sell it or use it for marketing.</p>
 
-  <p><strong>No Forms, No Signups:</strong> LearnToWork doesn't have email signup forms or contact forms. There's no database of users. I don't collect names, emails, or other personal info unless you voluntarily email me.</p>
+  <p><strong>No Forms, No Signups:</strong> Learn To Work doesn't have email signup forms or contact forms. There's no database of users. I don't collect names, emails, or other personal info unless you voluntarily email me.</p>
 
   <h2>2. Cookies & Tracking</h2>
   <p>Google Analytics uses cookies to track your visit. These are small files stored on your device. If you don't want this, you can:</p>
@@ -197,15 +265,15 @@
   </ul>
 
   <h2>3. Third-Party Services</h2>
-  <p>LearnToWork links to other websites like YouTube, Upwork, Amazon, etc. When you click external links and visit those sites, they have their own privacy policies. I'm not responsible for how they handle your data. Always read their privacy policies before signing up.</p>
+  <p>Learn To Work links to other websites like YouTube, Upwork, Amazon, etc. When you click external links and visit those sites, they have their own privacy policies. I'm not responsible for how they handle your data. Always read their privacy policies before signing up.</p>
 
   <p><strong>Affiliate Links:</strong> Some links are affiliate links. This means if you click and make a purchase, I might earn a small commission. But the affiliate programs (Amazon, ShareASale, etc.) have their own privacy policies about tracking.</p>
 
   <h2>4. Data Security</h2>
-  <p>LearnToWork is hosted on GitHub Pages, which is secure. Your visits to the website are encrypted (HTTPS). However, if you email me or contact third-party services, those communications have their own security standards.</p>
+  <p>Learn To Work is hosted on GitHub Pages, which is secure. Your visits to the website are encrypted (HTTPS). However, if you email me or contact third-party services, those communications have their own security standards.</p>
 
   <h2>5. International Users & Privacy Laws</h2>
-  <p>LearnToWork is accessible worldwide. Different countries have different privacy laws:</p>
+  <p>Learn To Work is accessible worldwide. Different countries have different privacy laws:</p>
   <ul>
     <li><strong>Pakistan:</strong> Data is subject to Pakistan's data protection laws</li>
     <li><strong>EU/GDPR:</strong> If you're in the EU, you have rights under GDPR</li>
@@ -229,7 +297,7 @@
   <p>If you have privacy questions, concerns, or want to request data deletion:</p>
   <p><strong>Email:</strong> <a href="mailto:hello.littleboom@gmail.com">hello.littleboom@gmail.com</a></p>
 
-  <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem;">
+  <p class="bottom-line">
     <strong>Bottom line:</strong> I care about your privacy. I don't collect more data than necessary, and I'm transparent about what I do collect.
   </p>
 </div>
@@ -242,8 +310,22 @@
     <a href="/disclaimer.html">Disclaimer</a>
     <a href="/contact.html">Contact</a>
   </p>
-  <p>© 2026 LearnToWork — Pakistan's Trusted Earning Guide</p>
+  <div class="footer-bottom">
+    <p>© 2026 Learn To Work — Pakistan's Trusted Earning Guide</p>
+  </div>
 </footer>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
 
 </body>
 </html>
