@@ -92,6 +92,8 @@
       transition: all 0.3s ease;
       cursor: pointer;
       border: none;
+      text-decoration: none;
+      display: inline-block;
     }
     .nav-cta:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
 
@@ -249,6 +251,86 @@
     .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); }
     .footer-bottom p { margin: 0.5rem 0; font-size: 0.9rem; }
 
+    .footer-legal { text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .footer-legal a { color: var(--muted); text-decoration: none; margin: 0 1rem; font-size: 0.85rem; transition: color 0.3s ease; }
+    .footer-legal a:hover { color: var(--green); }
+
+    /* Cookie Consent Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-top: 2px solid var(--green);
+      padding: 1.5rem;
+      display: none;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 999;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .cookie-banner.show { display: flex; }
+
+    .cookie-message { 
+      flex: 1;
+      min-width: 250px;
+      color: var(--muted);
+    }
+
+    .cookie-message a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cookie-message a:hover {
+      text-decoration: underline;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      min-width: 200px;
+    }
+
+    .cookie-btn {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .cookie-accept {
+      background: var(--green);
+      color: var(--bg);
+    }
+
+    .cookie-accept:hover {
+      background: #059669;
+      transform: translateY(-2px);
+    }
+
+    .cookie-decline {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .cookie-decline:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
     @media (max-width: 768px) {
       nav { padding: 1rem; height: auto; }
       .nav-links { gap: 1rem; font-size: 0.85rem; }
@@ -261,6 +343,9 @@
       .accordion-title { font-size: 1.1rem; gap: 0.7rem; }
       .footer-content { grid-template-columns: 1fr; }
       .stat-box { padding: 1.5rem 1rem; }
+      .cookie-banner { flex-direction: column; padding: 1rem; }
+      .cookie-buttons { width: 100%; flex-direction: column; }
+      .cookie-btn { width: 100%; }
     }
 
     @media (max-width: 480px) {
@@ -279,7 +364,7 @@
     <a href="/" class="brand">LearnToWork</a>
     <div class="nav-links">
       <a href="#categories">Explore</a>
-      <a href="#footer" class="nav-cta">Contact</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </div>
   </nav>
 
@@ -290,7 +375,7 @@
         <p class="subtitle">Complete, honest guides to earning real money online. From AI to freelancing, from surveys to content creation. Trusted by thousands worldwide.</p>
         <div class="cta-buttons">
           <button class="cta-btn cta-primary" onclick="scrollToCategories()">Explore Guides →</button>
-          <a href="#footer" class="cta-btn cta-secondary">Get Started</a>
+          <a href="contact.html" class="cta-btn cta-secondary">Get Started</a>
         </div>
       </div>
     </div>
@@ -388,7 +473,7 @@
               </div>
             </a>
 
-            <a href="/youtube-seo/" class="article-card">
+            <a href="youtube-seo/" class="article-card">
               <div class="article-icon">🚀</div>
               <h3>YouTube SEO & Ranking</h3>
               <p>Get 1M views: Algorithm secrets, CTR mastery, thumbnails, titles. Step-by-step blueprint.</p>
@@ -441,7 +526,7 @@
         </div>
         <div class="accordion-content">
           <div class="articles-list">
-            <a href="ysense-withdrawal-guide/" class="article-card">
+            <a href="ysense-withdrawal-guide.html" class="article-card">
               <div class="article-icon">💰</div>
               <h3>How to Withdraw to JazzCash</h3>
               <p>Step-by-step guide to withdraw earnings directly to JazzCash. Fast, easy, secure. Works with ySense and other platforms.</p>
@@ -465,7 +550,7 @@
       <div class="footer-section">
         <h4>📧 Contact & Support</h4>
         <p>Questions? Suggestions? Found an error? We'd love to hear from you!</p>
-        <a href="contact/" class="footer-cta">Get in Touch</a>
+        <a href="contact.html" class="footer-cta">Get in Touch</a>
       </div>
       <div class="footer-section">
         <h4>🌍 Payment Methods</h4>
@@ -477,13 +562,52 @@
         </ul>
       </div>
     </div>
+    
+    <div class="footer-legal">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+
     <div class="footer-bottom">
       <p>© 2026 LearnToWork. All guides are honest, practical, and thoroughly verified.</p>
       <p>Learn Skills → Earn Money → Build Your Future 🚀</p>
     </div>
   </footer>
 
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-message">
+      🍪 We use cookies and analytics (Google Analytics) to improve your experience. By continuing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.
+    </div>
+    <div class="cookie-buttons">
+      <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+      <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+    </div>
+  </div>
+
   <script>
+    // Cookie Consent
+    function showCookieBanner() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (!consent) {
+        document.getElementById('cookieBanner').classList.add('show');
+      }
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+    function declineCookies() {
+      localStorage.setItem('cookieConsent', 'declined');
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+    // Accordion
     function toggleAccordion(header) {
       const item = header.parentElement;
       const isActive = item.classList.contains('active');
@@ -495,11 +619,14 @@
       }
     }
 
+    // Scroll to categories
     function scrollToCategories() {
       document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
     }
 
+    // Initialize
     window.addEventListener('load', function() {
+      showCookieBanner();
       const firstItem = document.querySelector('.accordion-item');
       if (firstItem) {
         firstItem.classList.add('active');
