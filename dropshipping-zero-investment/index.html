@@ -77,7 +77,20 @@
     .meta-item i { color: var(--accent); font-size: 0.8rem; }
     .meta-item strong { color: var(--light); }
     .earnings-badge { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: var(--green); padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.85rem; font-weight: 700; }
-    .hero-img { width: 100%; max-width: 900px; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); display: block; }
+    
+    /* ===== HERO IMAGE ===== */
+    .hero-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 50vh;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      display: block;
+      margin: 0 auto;
+    }
 
     .article-layout { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; max-width: 1400px; margin: 0 auto; padding: 3rem 5% 5rem; }
     .toc-sidebar { position: sticky; top: 90px; height: fit-content; background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
@@ -98,7 +111,19 @@
     .article-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; transition: color 0.3s; }
     .article-content a:hover { color: var(--gold); }
 
-    .article-img { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.35); display: block; margin: 1.5rem 0 0.5rem; }
+    /* ===== ARTICLE IMAGES ===== */
+    .article-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+      display: block;
+      margin: 1.5rem auto 0.5rem;
+    }
     .img-caption { text-align: center; font-size: 0.8rem; color: var(--gray-dark); margin-bottom: 1.5rem; }
 
     .callout { border-radius: 12px; padding: 1.3rem 1.5rem; margin: 1.5rem 0; display: flex; gap: 1rem; align-items: flex-start; }
@@ -176,29 +201,41 @@
     ::-webkit-scrollbar-thumb:hover { background: var(--gray-dark); }
 
     @media (max-width: 1024px) { .article-layout { grid-template-columns: 1fr; } .toc-sidebar { position: static; } .related-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .mobile-menu-btn { display: block; } .article-hero h1 { font-size: 1.9rem; } .article-meta-bar { flex-direction: column; gap: 0.8rem; } .footer-grid { grid-template-columns: 1fr; gap: 2rem; } .cookie-banner { flex-direction: column; padding: 1rem; } .cookie-buttons { width: 100%; flex-direction: column; } .cookie-btn { width: 100%; } }
+    @media (max-width: 768px) { 
+      .nav-links, .nav-cta { display: none; } 
+      .mobile-menu-btn { display: block; } 
+      .article-hero { padding: 7rem 5% 2rem; }
+      .article-hero h1 { font-size: 1.6rem; } 
+      .hero-img { max-height: 35vh; border-radius: 12px; }
+      .article-img { max-height: 250px; }
+      .article-meta-bar { flex-direction: column; gap: 0.8rem; } 
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; } 
+      .cookie-banner { flex-direction: column; padding: 1rem; } 
+      .cookie-buttons { width: 100%; flex-direction: column; } 
+      .cookie-btn { width: 100%; } 
+    }
     @media (max-width: 480px) { .logo { font-size: 1.2rem; } .article-hero h1 { font-size: 1.5rem; } .article-content h2 { font-size: 1.3rem; } }
   </style>
 </head>
 <body>
 
   <nav id="navbar">
-    <a href="../index.html" class="logo"><i class="fas fa-rocket"></i> Learn To Work</a>
+    <a href="/" class="logo"><i class="fas fa-rocket"></i> Learn To Work</a>
     <ul class="nav-links">
-      <li><a href="../index.html#categories">Categories</a></li>
-      <li><a href="../index.html#articles">Guides</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="/#categories">Categories</a></li>
+      <li><a href="/#articles">Guides</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="nav-cta">Get Started</a>
+    <a href="/contact.html" class="nav-cta">Get Started</a>
     <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
   </nav>
 
   <div class="article-hero">
     <div class="breadcrumb">
-      <a href="../index.html">Home</a>
+      <a href="/">Home</a>
       <i class="fas fa-chevron-right" style="font-size:0.7rem;"></i>
-      <a href="../online-store/">Online Store</a>
+      <a href="/online-store/">Online Store</a>
       <i class="fas fa-chevron-right" style="font-size:0.7rem;"></i>
       <span>Dropshipping with $0</span>
     </div>
@@ -212,13 +249,16 @@
       <div class="meta-item"><i class="fas fa-globe"></i> <strong>Worldwide</strong></div>
       <span class="earnings-badge">💰 $0 to Start</span>
     </div>
-    <img
-      src="../images/dropshipping-zero-investment/dropshipping-zero-investment-social-share.png"
-      alt="How to Start Dropshipping with Zero Investment 2026"
-      class="hero-img"
-      loading="lazy"
-      width="1200" height="630"
-    >
+    <picture>
+      <source srcset="../images/dropshipping-zero-investment/dropshipping-zero-investment-social-share.webp" type="image/webp">
+      <img 
+        src="../images/dropshipping-zero-investment/dropshipping-zero-investment-social-share.png"
+        alt="How to Start Dropshipping with Zero Investment 2026"
+        class="hero-img"
+        loading="lazy"
+        width="1200" 
+        height="630">
+    </picture>
   </div>
 
   <div class="article-layout">
@@ -276,13 +316,16 @@
         <li><strong>$1/Month for 3 Months:</strong> After trial, continue for just $1/month for your first 3 months. That's $3 total to run a real online store.</li>
       </ul>
       <p>This gives you about <strong>3 months and 3 days</strong> to make your first sales before paying standard $39/month. If you cannot make $39 profit in 3 months, rethink your strategy — not give up, but rethink.</p>
-      <img
-        src="../images/dropshipping-zero-investment/shopify-free-trial-strategy.png"
-        alt="Shopify free trial strategy for zero investment dropshipping"
-        class="article-img"
-        loading="lazy"
-        width="1200" height="675"
-      >
+      <picture>
+        <source srcset="../images/dropshipping-zero-investment/shopify-free-trial-strategy.webp" type="image/webp">
+        <img 
+          src="../images/dropshipping-zero-investment/shopify-free-trial-strategy.png"
+          alt="Shopify free trial strategy for zero investment dropshipping"
+          class="article-img"
+          loading="lazy"
+          width="1200" 
+          height="675">
+      </picture>
       <p class="img-caption">Use Shopify's free trial + $1/month deal to launch your store without upfront cost</p>
 
       <h2 id="free-alternatives">4. Free Store Alternatives to Shopify</h2>
@@ -308,13 +351,16 @@
       <p>No monthly fees. US and Europe warehouses for faster shipping. Free product photography. Pay only per order.</p>
       <h3>Zendrop (Free Plan)</h3>
       <p>Free plan covers up to 50 orders/month — plenty to test your store. After 50 orders, upgrade to paid ($49/month) — by then you should have enough revenue.</p>
-      <img
-        src="../images/dropshipping-zero-investment/free-suppliers-platforms.png"
-        alt="Best free dropshipping supplier platforms - AliExpress, CJDropshipping, Zendrop"
-        class="article-img"
-        loading="lazy"
-        width="1200" height="675"
-      >
+      <picture>
+        <source srcset="../images/dropshipping-zero-investment/free-suppliers-platforms.webp" type="image/webp">
+        <img 
+          src="../images/dropshipping-zero-investment/free-suppliers-platforms.png"
+          alt="Best free dropshipping supplier platforms - AliExpress, CJDropshipping, Zendrop"
+          class="article-img"
+          loading="lazy"
+          width="1200" 
+          height="675">
+      </picture>
       <p class="img-caption">AliExpress, CJDropshipping, and Zendrop — all free to start using today</p>
 
       <h2 id="free-tools">6. Every Free Tool You Need</h2>
@@ -333,13 +379,16 @@
           <tr><td><strong>Mailchimp</strong></td><td>Email marketing up to 500 contacts</td><td><span class="free-badge">FREE</span></td></tr>
         </tbody>
       </table>
-      <img
-        src="../images/dropshipping-zero-investment/free-dropshipping-tools.png"
-        alt="All free tools needed for zero investment dropshipping store"
-        class="article-img"
-        loading="lazy"
-        width="1200" height="675"
-      >
+      <picture>
+        <source srcset="../images/dropshipping-zero-investment/free-dropshipping-tools.webp" type="image/webp">
+        <img 
+          src="../images/dropshipping-zero-investment/free-dropshipping-tools.png"
+          alt="All free tools needed for zero investment dropshipping store"
+          class="article-img"
+          loading="lazy"
+          width="1200" 
+          height="675">
+      </picture>
       <p class="img-caption">Every tool you need — all completely free to use</p>
 
       <h2 id="free-marketing">7. Free Marketing Methods That Actually Work</h2>
@@ -373,13 +422,16 @@
         <h3>Post Consistently — Not Perfectly</h3>
         <p>Post 1–3 times per day. Raw, authentic videos often outperform highly edited ones on TikTok. Study the first 3 seconds of your competitors' best videos and model that energy.</p>
       </div>
-      <img
-        src="../images/dropshipping-zero-investment/tiktok-organic-strategy.png"
-        alt="TikTok organic strategy for free dropshipping marketing"
-        class="article-img"
-        loading="lazy"
-        width="1200" height="675"
-      >
+      <picture>
+        <source srcset="../images/dropshipping-zero-investment/tiktok-organic-strategy.webp" type="image/webp">
+        <img 
+          src="../images/dropshipping-zero-investment/tiktok-organic-strategy.png"
+          alt="TikTok organic strategy for free dropshipping marketing"
+          class="article-img"
+          loading="lazy"
+          width="1200" 
+          height="675">
+      </picture>
       <p class="img-caption">TikTok organic: post consistently for 6 weeks and one viral video can change everything</p>
       <div class="callout tip">
         <span class="callout-icon">🎯</span>
@@ -436,7 +488,7 @@
       <div class="series-nav">
         <div class="series-nav-title">📦 Online Store Series</div>
         <div class="series-nav-links">
-          <a href="../shopify-dropshipping-guide/" class="series-nav-item">
+          <a href="/shopify-dropshipping-guide/" class="series-nav-item">
             <span class="num">1</span>
             Shopify Dropshipping Complete Guide 2026
           </a>
@@ -450,19 +502,19 @@
       <div class="related-section">
         <h3>📚 Related Guides</h3>
         <div class="related-grid">
-          <a href="../shopify-dropshipping-guide/" class="related-card">
+          <a href="/shopify-dropshipping-guide/" class="related-card">
             <span class="related-card-icon">🛒</span>
             <div><h4>Shopify Dropshipping Complete Guide</h4><p>Full breakdown of how to build a profitable Shopify store step-by-step.</p></div>
           </a>
-          <a href="../ai-chatbot-monetization-guide/" class="related-card">
+          <a href="/ai-chatbot-monetization-guide/" class="related-card">
             <span class="related-card-icon">🤖</span>
             <div><h4>AI Chatbot Monetization</h4><p>Build AI chatbots and earn $300–800/month. No coding required.</p></div>
           </a>
-          <a href="../youtube-monetization/" class="related-card">
+          <a href="/youtube-monetization/" class="related-card">
             <span class="related-card-icon">🎬</span>
             <div><h4>YouTube Monetization Guide</h4><p>How to monetize your YouTube channel step-by-step in 2026.</p></div>
           </a>
-          <a href="../ai-prompt-engineering-pakistan/" class="related-card">
+          <a href="/ai-prompt-engineering-pakistan/" class="related-card">
             <span class="related-card-icon">💬</span>
             <div><h4>Prompt Engineering 2026</h4><p>Make $500+/month creating AI prompts for businesses worldwide.</p></div>
           </a>
@@ -475,7 +527,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="../index.html" class="logo"><i class="fas fa-rocket"></i> Learn To Work</a>
+        <a href="/" class="logo"><i class="fas fa-rocket"></i> Learn To Work</a>
         <p>Empowering people worldwide with free, honest, and actionable guides to earning money online. No scams, no shortcuts — just real skills and real results. Built with passion by Isabella.</p>
         <div class="social-links">
           <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -487,25 +539,25 @@
       <div class="footer-links">
         <h4>Categories</h4>
         <ul>
-          <li><a href="../ai-earning/">Earn with AI</a></li>
-          <li><a href="../video-automation/">Video Automation</a></li>
-          <li><a href="../online-store/">Online Store</a></li>
+          <li><a href="/ai-earning/">Earn with AI</a></li>
+          <li><a href="/video-automation/">Video Automation</a></li>
+          <li><a href="/online-store/">Online Store</a></li>
         </ul>
       </div>
       <div class="footer-links">
         <h4>Company</h4>
         <ul>
-          <li><a href="../about.html">About Isabella</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../index.html#articles">All Guides</a></li>
+          <li><a href="/about.html">About Isabella</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/#articles">All Guides</a></li>
         </ul>
       </div>
       <div class="footer-links">
         <h4>Legal</h4>
         <ul>
-          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="../terms.html">Terms of Service</a></li>
-          <li><a href="../disclaimer.html">Disclaimer</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="/disclaimer.html">Disclaimer</a></li>
         </ul>
       </div>
     </div>
@@ -516,7 +568,7 @@
   </footer>
 
   <div class="cookie-banner" id="cookieBanner">
-    <div class="cookie-message">🍪 We use cookies and Google Analytics to improve your experience. By continuing, you agree to our <a href="../privacy-policy.html">Privacy Policy</a>.</div>
+    <div class="cookie-message">🍪 We use cookies and Google Analytics to improve your experience. By continuing, you agree to our <a href="/privacy-policy.html">Privacy Policy</a>.</div>
     <div class="cookie-buttons">
       <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
       <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
