@@ -81,6 +81,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- ✅ New Article Added Today -->
+   <url>
+    <loc>https://learntowork.online/ai-video-editing-guide/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Online Store Articles -->
   <url>
